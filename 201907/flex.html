@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .main {
+      display: flex;
+      border: 5px solid #f00;
+    }
+
+    .item {
+      height: 60px;
+      border: 1px solid #000;
+      /* display: flex;
+      align-items: center;
+      justify-content: center; */
+
+      /* 最常用flex:1; */
+      flex-grow: 1;
+      flex-shrink: 1;
+
+      /* 设置宽度，为0%是flex-shrink不起作用 */
+      flex-basis: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="item">
+      <div>你好你好你好你好你好你好</div>
+    </div>
+    <div class="item">
+      <div>中国中国中国</div>
+    </div>
+  </div>
+</body>
+
+</html>

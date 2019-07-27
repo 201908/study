@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>手写</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+    ul,
+    ol {
+      list-style: none outside none;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    .main {
+      width: 650px;
+    }
+
+    .week {
+      float: left;
+      width: 200px;
+    }
+
+    .table-wrap {
+      float: right;
+      width: 400px;
+    }
+
+    td {
+      border: 1px solid #333;
+      width: 10px;
+      height: 30px;
+    }
+
+    .red {
+      background: #f00
+    }
+  </style>
+</head>
+
+
+
+<body>
+  <div class="main">
+    <div class="week">
+      <ul>
+        <li>
+          All
+          <input type="checkbox" checked="checked" />
+        </li>
+        <li>
+          Monday
+          <input type="checkbox" />
+        </li>
+      </ul>
+    </div>
+    <div class="table-wrap">
+      <div class="head">
+
+      </div>
+      <table>
+        <tr>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr>
+          <td class="td dd"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+      </table>
+      <form>
+        <input type="checkbox" />
+      </form>
+      <form>
+        <input type="checkbox" />
+      </form>
+    </div>
+  </div>
+  <script>
+    // const getElement = document.getElementsByTagName("td") //HTMLCollection
+    // const getElement = document.getElementsByClassName("td") //HTMLCollection
+    const getElement = document.querySelectorAll(".td")
+    console.log(getElement)
+    // let atr = document.createAttribute('class')
+    // atr.nodeValue = "red"
+    // console.log(atr)
+    for (let i = 0; i < getElement.length; i++) {
+      getElement[i].onclick = () => {
+        // if (getElement[i].classList.value.indexOf('red') === -1) {
+        //   getElement[i].classList.add('red')
+        // } else {
+        //   getElement[i].classList.remove('red')
+        // }
+        if (getElement[i].style.background !== "rgb(255, 0, 0)") {
+          getElement[i].style.background = "#f00"
+        } else {
+          getElement[i].style.background = "#fff"
+        }
+      }
+    }
+    // getElement.forEach((td) => {
+    //   console.log(td)
+
+    // })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var fruits = [111, 222, 333, 444, 222];
+        var a = fruits.indexOf(222);
+        console.log(a)
+
+
+        const arr = [7, NaN, NaN, {}, {}, 5, 33, undefined, 5, undefined, 7, null, 5, true, 6, true, 7, null, "Apple",
+            "Apple"
+        ]
+        const noRepeat = []
+        arr.forEach(item => {
+            // 数组里面没有会返回-1
+            if (noRepeat.indexOf(item) === -1) {
+                noRepeat.push(item)
+            }
+        })
+        console.log(noRepeat)
+    </script>
+</body>
+
+</html>
