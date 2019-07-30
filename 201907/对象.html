@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <div>
+
+    </div>
+
+  </div>
+  <script>
+    var obj = {
+      a: 'a',
+      b: 'b',
+      c: 'c'
+    };
+
+    // console.log(obj[0])
+    console.log(Object.keys(obj))
+    let boo = false;
+    Object.keys(obj).forEach(function (key) {
+      if (obj[key] !== "") {
+        // console.log(key)
+        boo = true
+      }
+      console.log(key, obj[key]);
+
+    });
+    // console.log(boo)
+  </script>
+</body>
+
+</html>

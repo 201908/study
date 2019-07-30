@@ -1,0 +1,62 @@
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script src="https://unpkg.com/vue"></script>
+
+    <div id="app">
+      <p>{{ obj.message }}</p>
+      <div v-if="obj.type === 'A'">
+        A
+      </div>
+      <div v-else-if="obj.type === 'B'">
+        B
+      </div>
+      <div v-else-if="obj.type === 'C'">
+        C
+      </div>
+
+
+      <button @click="test('A')">a</button>
+      <button @click="test('B')">b</button>
+      <button @click="test('C')">c</button>
+
+    </div>
+
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          obj: {
+
+          }
+        },
+        created() {
+          console.log(this.obj.message)
+        },
+        watch: {
+          data(val, oldVal) {
+            console.log(val, oldVal)
+          }
+        },
+        methods: {
+          test(e) {
+            this.obj.message = "888"
+            // console.log(22)
+            this.obj.type = e
+            console.log(this.obj)
+          }
+        }
+      })
+      // vm.type = "B"
+    </script>
+  </body>
+
+  </html>
