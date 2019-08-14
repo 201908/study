@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <div>
+
+    </div>
+
+  </div>
+  <script>
+    var tools = {
+      data: "hello"
+    }
+    var tools = tools || {}
+    tools.name = "ct"
+    tools.index = {
+      init() {
+        console.log("init")
+      },
+      tabs() {
+        console.log("tabs")
+      }
+    }
+    console.log(tools)
+
+
+    function DOG(name) {
+
+      this.name = name;
+      alert(22)
+
+    }
+
+    DOG.prototype = {
+      species: '犬科'
+    };
+    var dogA = new DOG('大毛');
+
+    var dogB = new DOG('二毛');
+
+
+    // console.log(DOG)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <div>
+
+    </div>
+
+  </div>
+  <script>
+    // let obj = {
+    //   reg: /^asd$/,
+    //   fun: function () {},
+    //   syb: Symbol('foo'),
+    //   asd: 'asd'
+    // };
+    // let cp = JSON.parse(JSON.stringify(obj));
+    // console.log(cp);
+    //     不能复制function、正则、Symbol
+    // 循环引用报错
+    // 相同的引用会被重复复制
+
+
+    let obj = {
+      asd: 'asd'
+    };
+    let obj2 = {
+      name: 'aaaaa'
+    };
+    obj.ttt1 = obj2;
+    obj.ttt2 = obj2;
+    let cp = JSON.parse(JSON.stringify(obj));
+    obj.ttt1.name = 'change';
+    cp.ttt1.name = 'change';
+    console.log(obj, cp);
+  </script>
+</body>
+
+</html>
