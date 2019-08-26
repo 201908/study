@@ -11,19 +11,36 @@
 
 <body>
   <div>
-    <div>
-
+    <div class="list">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
     </div>
 
   </div>
-  <p>222</p>
+  <p class="data">222</p>
+  <p class="item">333</p>
+  <div id="btn"></div>
   <script>
     function myHandler(event) {
-      alert(event.data.foo);
+      console.log(event.data.foo);
     }
-    $("p").on("click", {
+    $("p.data").on("click", {
       foo: "bar"
     }, myHandler)
+
+    $(".item").click(function (a, b) {
+      // console.log(a, b)
+      $("#btn").trigger("active", "active");
+    })
+
+    $("#btn").on("active", function (a, b) {
+      console.log(a)
+      $('.list li').eq(2).addClass(b)
+    });
   </script>
 </body>
 
