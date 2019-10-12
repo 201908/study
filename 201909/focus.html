@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <div>
+      <input type="text">
+    </div>
+    <div>
+      <input type="text">
+    </div>
+    <div>
+      <input type="text">
+    </div>
+    <div style="display:none;">
+      <input type="text">
+    </div>
+
+  </div>
+  <script>
+    //获得焦点,触发 focus 事件,focus() 方法触发 focus 事件
+    $('input').focus()
+
+    // 规定当发生 focus 事件时运行的函数。
+    // $("input[type=text]").focus(function () {
+    //   this.blur();
+    // });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>trigger</title>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("input").select(function () {
+        $("input").after("文本被选中！");
+      });
+      $("button").click(function () {
+        $("input").trigger("select");
+      });
+
+      $(":text").select(function () {
+        /* ...do something... */
+        console.log(33)
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <input type="text" name="FirstName" value="Hello World" />
+  <br />
+  <button>激活 input 域的 select 事件</button>
+</body>
+
+</html>
