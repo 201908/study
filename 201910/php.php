@@ -51,9 +51,13 @@
   $a = array('one' => 1, 'two' => 2, 'three' => 3, 'four' => 44);
   print_r($a);
 
+  date_default_timezone_set("PRC");
   $time = date('Y-m-d');
   $template = "<div>{$time}</div>";
   echo $template;
+  echo dirname(__FILE__);
+  echo "<br />";
+  echo $_SERVER['DOCUMENT_ROOT'];
 
   ?>
 </body>
